@@ -1,0 +1,20 @@
+{
+  "name": "bookeeper",
+  "version": "1.0.0",
+  "description": "## Entities",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pedrolucaspalma/Bookeeper.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pedrolucaspalma/Bookeeper/issues"
+  },
+  "homepage": "https://github.com/pedrolucaspalma/Bookeeper#readme"
+}
