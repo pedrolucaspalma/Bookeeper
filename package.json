@@ -4,7 +4,8 @@
   "description": "## Entities",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/server.ts"
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,14 @@
   "bugs": {
     "url": "https://github.com/pedrolucaspalma/Bookeeper/issues"
   },
-  "homepage": "https://github.com/pedrolucaspalma/Bookeeper#readme"
+  "homepage": "https://github.com/pedrolucaspalma/Bookeeper#readme",
+  "devDependencies": {
+    "ts-node": "^10.3.0",
+    "typescript": "^4.4.4"
+  },
+  "dependencies": {
+    "@types/node": "^16.11.1",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.13"
+  }
 }
