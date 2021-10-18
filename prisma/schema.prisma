@@ -27,7 +27,7 @@ model User {
   userId   Int        @id @default(autoincrement())
   name     String
   email    String     @unique
-  birthday DateTime
+  // birthday DateTime
   bookCopy BookCopy[]
   library  Library?
 
