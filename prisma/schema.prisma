@@ -10,4 +10,42 @@ generator client {
   provider = "prisma-client-js"
 }
 
-model 
+model Book {
+  bookId        Int        @id @default(autoincrement())
+  author        String
+  gender1       String
+  gender2       String?
+  gender3       String?
+  title         String
+  yearOfRelease String
+  edition       String
+  seriesTitle   String?
+  copies        BookCopy[]
+}
+
+model User {
+  userId   Int        @id @default(autoincrement())
+  name     String
+  email    String     @unique
+  birthday DateTime
+  bookCopy BookCopy[]
+  library  Library?
+
+}
+
+model BookCopy {
+  bookCopyId     Int     @id @default(autoincrement())
+  originalBook   Book    @relation(fields: [originalBookId], references: [bookId])
+  originalBookId Int
+  owner          User    @relation(fields: [ownerId], references: [userId])
+  ownerId        Int
+  library        Library @relation(fields: [libraryId], references: [libraryId])
+  libraryId Int
+}
+
+model Library {
+  libraryId  Int        @id @default(autoincrement())
+  owner      User       @relation(fields: [ownerId], references: [userId])
+  ownerId    Int
+  bookCopies BookCopy[] 
+}
