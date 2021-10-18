@@ -1,13 +1,15 @@
 import {Request, response, Response} from "express"
 
+const createUser =  require("../services/CreateUserService")
+
 class CreateUserController{
     async handle(req: Request, res: Response){
-        const {name, email, birthday} = req.body
+        const { name, email } = req.body
 
-        const createUserService = new CreateUserService();
+        const user = await createUser(name, email)
 
-        const user = await createUserService.execute({name, email})
-        
-        return response.json(user)
+        return res.json(user)
     }
 }
+
+export { CreateUserController }
